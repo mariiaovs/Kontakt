@@ -30,3 +30,7 @@ button:hover {
     cursor: pointer;
     opacity: 0.8;    
 }
+
+.form-row {
+    margin-bottom: 20px;
+}

@@ -12,19 +12,30 @@
     </header>
     <div class="form">
             <h2>Schreiben Sie mir eine Nachricht:</h2>
-            <form>
-                <div>
-                    <label for="name">Ihr Name</label>
-                    <br>
-                    <input type="text" id="name">
+            <form id="contact-form" method="POST" action="sendmail.php">
+                <div class="form-row form-error" style="display:none;"></div>
+                <div class="form-row">
+                  <label for="contact-form-name">Ihr Name</label>
+                  <br>
+                  <input id="contact-form-name" class="form-input" type="text" name="name" required placeholder="Name">
                 </div>
-                <div>
-                    <label for="message">Ihre Nachricht</label>
-                    <br>
-                    <textarea id="message" cols="60" rows="10"></textarea>
+                <div class="form-row">
+                  <label for="contact-form-email">Ihre E-mail</label>
+                  <br>
+                  <input id="contact-form-email" class="form-input" type="email" name="email" required placeholder="E-mail">
                 </div>
-                <button type="submit">Absenden</button>
-            </form>
+                <div class="form-row">
+                  <label for="contact-form-phone">Ihre Telefonnummer</label>
+                  <br>
+                  <input id="contact-form-phone" class="form-input" type="tel" name="phone" placeholder="Telefonnummer">
+                </div>
+                <div class="form-row">
+                  <label for="contact-form-message">Ihre Nachricht</label>
+                  <br>
+                  <textarea id="contact-form-message" class="form-input" name="message" required placeholder="Nachricht"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+              </form> 
         </div>
 </body>
 </html>
